@@ -1,107 +1,127 @@
-*{
-	margin:0;
-	padding:0;
-	overflow: hidden;
-	box-sizing: border-box;
-	outline: none;
-	font-family: 'Montserrat', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  outline: none;
 
 }
-.content{
-	width: 100%;
-	height: 100vh;
-	display: flex;
-	justify-content: space-between;
+:root{
+	--primary-color:#ef233c;
+}
 
+body{
+	font-family: "Poppins", sans-serif;
+}
+
+a{
+  text-decoration: none;
+}
+
+.content {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
 }
 
 .left,
-.right{
-	position: relative;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 50%;
+.right {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
 }
 
-.left{
-	background: #ef233c;
+.left {
+  background: var(--primary-color) ;
 }
 
-.left img{
-	height: 50%;
+.left img {
+  height: 50%;
 }
 
-.container{
-	width: 100%;
-	height: 100%;
-
-
+.container {
+  width: 100%;
+  height: 100%;
 }
-button{
-	width: 100%;
-	border: none;
-	margin-top: 0.5rem;
-	padding: 0.5rem 0;
-	background: #D90429;
-	font-family: cursive, sans-serif;
-	color: #fff;
-	cursor: pointer;
+button {
+  width: 100%;
+  border: none;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0;
+  background: var(--primary-color);
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all .5s;
 }
-header{
-	text-align: center;
+button:hover{
+	opacity: .9;
 }
-
-header h1{
-	margin-bottom: 1rem;
-	font-family: cursive, sans-serif;
+header {
+  text-align: center;
 }
 
-input{
-	width: 100%;
-	padding: 0.5rem 1rem;
-	border: solid 2px #ddd;
-
+header h1 {
+  margin-bottom: 1rem;
 }
 
-header p{
-
-	font-family: Montserrat, sans-serif;
-	font-weight: 100;
-	opacity: 0.8;
+input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: solid 2px #ddd;
+  transition: all .5s;
+}
+input:focus{
+	border-bottom-color:var(--primary-color);
+}
+header p {
+  color: #111;
+  font-size: 14px;
 }
 
-.group{
-	margin: 1.5rem 0;
+.group {
+  margin: 1.5rem 0;
+}
+.forgot_password {
+  margin-top: 0.3rem;
+  font-size: 12px;
+  color: var(--primary-color);
+  float: right;
+  transition: all 0.5s;
+}
+.forgot_password:hover{
+	opacity: .8;
+}
+.circle {
+  position: absolute;
+  width: 98px;
+  height: 98px;
+  border-radius: 98px;
+  background: var(--primary-color);
+  right: -2rem;
+  bottom: -2rem;
+  opacity: 0.9;
 }
 
-.circle{
-	position: absolute;
-	width: 98px;
-	height: 98px;
-	border-radius: 98px;
-	background: #D90429;
-	right: -2rem;
-		bottom: -2rem;
-	opacity: 0.9;
-}
-
-@media (max-width: 766px){
-	.content{
-		flex-direction: column;
-	}
-	.left{
-		display: none;
-	}
-	.left,
-	.right{
-		height: 100%;
-		width: 100%;
-	}
-	.circle{
-	
-		right: -2rem;
-		bottom: -2rem;
-	}
+@media (max-width: 766px) {
+  .content {
+    flex-direction: column;
+  }
+  .left {
+    display: none;
+  }
+  .left,
+  .right {
+    height: 100%;
+    width: 100%;
+  }
+  .circle {
+    right: -2rem;
+    bottom: -2rem;
+  }
 }
